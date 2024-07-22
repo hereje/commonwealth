@@ -2,10 +2,8 @@ import { command, dispose, logger } from '@hicommonwealth/core';
 import { Community, models } from '@hicommonwealth/model';
 import { Op } from 'sequelize';
 
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const log = logger(__filename);
+const log = logger(import.meta.filename);
 
 async function main() {
   const stakedCommunities = await models.Community.findAll({

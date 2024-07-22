@@ -6,7 +6,7 @@ import {
   createSitemapGenerator,
 } from '@hicommonwealth/sitemaps';
 
-const log = logger(__filename);
+const log = logger(import.meta.filename);
 
 async function doExec() {
   if (process.env.SITEMAP_ENV !== 'production') {

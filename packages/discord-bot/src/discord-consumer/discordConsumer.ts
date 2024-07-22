@@ -21,13 +21,11 @@ import {
   IDiscordMessage,
   ThreadDiscordActions,
 } from '@hicommonwealth/model';
-import { fileURLToPath } from 'url';
 import v8 from 'v8';
 import { ZodUndefined } from 'zod';
 import { config } from '../config';
 
-const __filename = fileURLToPath(import.meta.url);
-const log = logger(__filename);
+const log = logger(import.meta.filename);
 stats(HotShotsStats());
 
 let isServiceHealthy = false;

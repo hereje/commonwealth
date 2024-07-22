@@ -1,5 +1,4 @@
 import { Op } from 'sequelize';
-import { fileURLToPath } from 'url';
 
 import { Session } from '@canvas-js/interfaces';
 import { AppError, logger } from '@hicommonwealth/core';
@@ -23,8 +22,7 @@ import { ServerAnalyticsController } from '../controllers/server_analytics_contr
 import assertAddressOwnership from '../util/assertAddressOwnership';
 import verifySessionSignature from '../util/verifySessionSignature';
 
-const __filename = fileURLToPath(import.meta.url);
-const log = logger(__filename);
+const log = logger(import.meta.filename);
 
 export const Errors = {
   NoChain: 'Must provide chain',

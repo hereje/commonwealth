@@ -1,4 +1,3 @@
-import { fileURLToPath } from 'url';
 import { config } from '../config';
 import { logger, rollbar } from '../logging';
 import { ExitCode } from './enums';
@@ -15,8 +14,7 @@ import {
   Stats,
 } from './interfaces';
 
-const __filename = fileURLToPath(import.meta.url);
-const log = logger(__filename);
+const log = logger(import.meta.filename);
 
 /**
  * Map of disposable adapter instances

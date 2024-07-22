@@ -13,10 +13,8 @@ import {
   upgradeBetaNodeIfNeeded,
 } from '../utils';
 
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const log = logger(__filename);
+const log = logger(import.meta.filename);
 
 // @ts-expect-error StrictNullChecks
 const FALLBACK_NODE_DURATION = +process.env.FALLBACK_NODE_DURATION_S || 300;

@@ -10,10 +10,8 @@ import { config, equalEvmAddresses } from '@hicommonwealth/model';
 import * as schemas from '@hicommonwealth/schemas';
 import { commonProtocol as cp } from '@hicommonwealth/shared';
 import { Hmac, createHmac } from 'crypto';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const logger = loggerFactory(__filename);
+const logger = loggerFactory(import.meta.filename);
 
 // TODO: how do we handle chain re-orgs
 
